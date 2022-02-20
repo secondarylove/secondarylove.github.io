@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>软件测试第二次课笔记 | 无知者のBlog 🤡</title><meta name="author" content="TT"><meta name="copyright" content="TT"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="关于软件测试的笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试第二次课笔记">
+<meta property="og:url" content="https://secondarylove.github.io/2021/02/19/software%20test2/2022.2.19/index.html">
+<meta property="og:site_name" content="无知者のBlog 🤡">
+<meta property="og:description" content="关于软件测试的笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg">
+<meta property="article:published_time" content="2021-02-19T02:25:00.000Z">
+<meta property="article:modified_time" content="2022-02-20T12:55:06.163Z">
+<meta property="article:author" content="TT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg"><link rel="shortcut icon" href="https://raw.githubusercontent.com/secondarylove/blog-img/main/Untitled.jpg"><link rel="canonical" href="https://secondarylove.github.io/2021/02/19/software%20test2/2022.2.19/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: TT","link":"链接: ","source":"来源: 无知者のBlog 🤡","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '软件测试第二次课笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-02-20 20:55:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="无知者のBlog 🤡" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://github.com/secondarylove/blog-img/blob/main/1def43abf85b8715__01.jpg?raw=true" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">无知者のBlog 🤡</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">软件测试第二次课笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-02-19T02:25:00.000Z" title="发表于 2021-02-19 10:25:00">2021-02-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-20T12:55:06.163Z" title="更新于 2022-02-20 20:55:06">2022-02-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="软件测试第二次课笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、课程目标"><a href="#一、课程目标" class="headerlink" title="一、课程目标"></a>一、课程目标</h2><pre><code>了解什么是软件的质量
+
+了解质量的铁三角
+
+理解软件的质量模型
+
+了解常见的质量管理体系
+
+了解QA的工作
+
+pid
+p-process 进程
+id 号
+
+PDCA 循环（质量环） (戴明环) P-plan(计划)
+D（Do)--执行；C（CHECK)--检查；A（Action)--行动
+
+石川  提出因果分析图，也叫鱼骨图（石川图）
+可结合 佐吉 提出的“swhy”法更好用
+
+6西格玛   6个西格玛，代表百万样品中只有3-4个残次品
+</code></pre>
+<p>​    </p>
+<h2 id="二、什么是质量"><a href="#二、什么是质量" class="headerlink" title="二、什么是质量"></a>二、什么是质量</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">案例： 换手机，手机用了5年，换一个质量更好的手机。</span><br><span class="line"></span><br><span class="line">1.品牌</span><br><span class="line">	Apple 华为 小米 oppo vivo 三星 杂牌</span><br><span class="line">	</span><br><span class="line">2.价格</span><br><span class="line">	不超1w,贵了华而不实，质量对不起价格。</span><br><span class="line"></span><br><span class="line">3.功能</span><br><span class="line">	支持人脸识别，nfc，拍照，无线充电,双卡双待，支持5G，定位导航，蓝牙wifi</span><br><span class="line">	通话质量</span><br><span class="line"></span><br><span class="line">4.性能</span><br><span class="line">	Cpu 内存ram(8G或16G),存储空间rom（256G，512G），安兔兔跑分，拍照性能，</span><br><span class="line">	电池性能，屏幕像素，刷新率，游戏性能（流畅度，发热），防尘防水 ip68 </span><br><span class="line">	</span><br><span class="line">5.外观</span><br><span class="line">	银色 黑色 白色；尺寸（不小于6英寸），材质（铝合金，玻璃）直板</span><br><span class="line">	</span><br><span class="line">6.售后服务，维修</span><br><span class="line"></span><br><span class="line">	2.1质量的定义</span><br><span class="line">    ISO 对质量的定义：一个实体的所有特性，基于这些特性可以显式需求或者隐式需求。</span><br><span class="line">    	质量就是实体基于这些实体特性满足需求的程度</span><br><span class="line">    </span><br><span class="line">    I-international</span><br><span class="line">    S-  standard</span><br><span class="line">    O-organization</span><br><span class="line">    </span><br><span class="line">    2.1.1 什么是实体</span><br><span class="line">    </span><br><span class="line">    	产品本身</span><br><span class="line">    	产品服务</span><br><span class="line">    	</span><br><span class="line">    	实体就是测试对象</span><br><span class="line">    	</span><br><span class="line">    2.1.2 实体的特性</span><br><span class="line">    </span><br><span class="line">    	饿了么</span><br><span class="line">    	1）软件本身：功能完整，运行流畅，点餐方便 支持哪些商家</span><br><span class="line">    	2）服务：送餐速度，超时补偿 </span><br><span class="line">    			态度</span><br><span class="line">    	买一款榨汁机，质量特性：</span><br><span class="line">    	1）功能</span><br><span class="line">    	2）性能</span><br><span class="line">    	3）安全性</span><br><span class="line">    	4）可靠性</span><br><span class="line">    	5）易用性</span><br><span class="line">    	6）耗能</span><br><span class="line">    	7）服务</span><br><span class="line">    	</span><br><span class="line">    	软件到底有哪些特性？</span><br><span class="line">    	</span><br><span class="line">    	</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、软件质量模型"><a href="#三、软件质量模型" class="headerlink" title="三、软件质量模型"></a>三、软件质量模型</h2><pre><code>McCall, Boehm, ISO 9126, ISO 25010    
+
+ISO  25010
+</code></pre>
+<h5 id="3-1-功能适用性"><a href="#3-1-功能适用性" class="headerlink" title="3.1 功能适用性"></a>3.1 功能适用性</h5><pre><code>        当软件在指定条件下使用的时候，软件产品提供满足显式和隐式的功能需求的能力
+
+        3.1.1 完整性
+
+                    提供的所有功能是否完整
+
+                    手机：通话，短信，上网，拍照 WIFI 充电 ...
+
+                    显式器：显示信号，亮度调整，对比度，色调设置，接口 VGA HDMI                    
+
+
+        3.1.2 适合性
+
+                    提供的某个功能本身是否完善（完整性关注整体功能的完整性，
+
+                    适合性关注个体功能的完整性）            
+
+
+        3.1.3 正确性
+
+                    提供的功能是否正确（对不对）
+</code></pre>
+<h5 id="3-2-运行效率（性能）-自动化测试工具-Load-Runner-Jmeter"><a href="#3-2-运行效率（性能）-自动化测试工具-Load-Runner-Jmeter" class="headerlink" title="3.2 运行效率（性能） (自动化测试工具 Load Runner  , Jmeter)"></a>3.2 运行效率（性能） (自动化测试工具 Load Runner  , Jmeter)</h5><pre><code>            在规定条件下，软件产品可提供适当性能的能力
+
+                3.2.1 时间特性
+
+                            1）响应时间（如 页面的响应的时间，操作的响应时间） 2-5-8原则
+
+                            2）页面切换时间：站点不同页面之间进行切换的时间
+
+                            3）并发 （双11同时有大量用户购物和平时，秒杀活动）
+
+
+
+                3.2.2 资源占用率
+
+                            在规定的条件下，相对于所用资源数量，软件产品可以提供适当性能的能力
+
+                            （如cpu的占用率，内存的占用率，网络宽带的占用率等）
+
+                                eg: 任务管理器-进程页面可以查看
+
+                3.2.3 容量
+
+                            软件最大程度满足需求的能力
+
+                            eg1.电商网站双11活动  秒杀
+
+                            并发登录人数
+
+                            并发下单人数
+
+                            同时在线人数  (bbs)-论坛
+
+                            eg2.硬盘  控制面板 - 设备管理器- 磁盘驱动器
+
+                            eg3.微信最多加5000个好友   不包括群聊和公众号
+
+                            eg4.icould空间:5g免费空间
+</code></pre>
+<h5 id="3-3-易用性"><a href="#3-3-易用性" class="headerlink" title="3.3 易用性"></a>3.3 易用性</h5><pre><code>                在指定的条件下使用时，软件产品被理解，学习，使用和吸引用户的你能力（容易使用）
+
+                    3.3.1 可辨识性
+
+                                用户可以快速的判断是否是自己想要的。直观的设计
+
+
+
+                    3.3.2 易学性
+
+                                帮助用户自行学习系统
+
+                                帮助手册，操作手册，操作视频
+
+                                使用引导页面
+
+
+
+                    3.3.3 易操作性
+
+                                操作步骤少
+
+                                    eg.常用的功能操作，菜单级数，进入系统后点击操作少于三步
+
+                                    eg.快捷键 ctrl C  ctrl V  ctrl A  ctrl S ctrl Z,F, tab 切换  上下左右导航 
+
+                                    右键 菜单
+
+                                    eg.登录时记住上一次的登录的用户名
+
+
+
+                    3.3.4 用户错误保护
+
+                                避免用户输入错误
+
+                                    eg.输入框文案提示
+
+                                        .输入错误有提示
+
+                                        .页面，输入框的提示
+</code></pre>
+<p>​                        </p>
+<pre><code>                    3.3.5 用户界面美观
+
+                                能提高用户的喜悦度和满意度的配色，图形设计，图形文字的比例... 
+
+
+
+                    3.3.6 可访问性
+
+                                被人使用最广泛的特性
+</code></pre>
+<p>​                                </p>
+<h5 id="3-4-兼容性"><a href="#3-4-兼容性" class="headerlink" title="3.4 兼容性"></a>3.4 兼容性</h5><pre><code>            定义：同时共享相同的硬件或软件时，没有不利的影响（没有冲突，互不影响）
+
+            3.4.1 共存性 
+
+                        与其他产品共享一个共同的环境和资源，没有不利的影响（没有冲突，互不影响）
+
+                                eg.杀毒软件误杀
+
+
+
+            3.4.2  互操作性
+
+                        两个或者两个以上的系统，产品，或部件可以交换信息，并使用已经交换的信息的额                            程度
+
+                            eg1. Word打印，可以支持不同的打印机
+
+                            1）浏览器的兼容  chrome firefox ie
+
+                            2）操作系统的兼容
+
+                            3）分辨率
+
+                            4）手机型号
+</code></pre>
+<h5 id="3-5-安全性"><a href="#3-5-安全性" class="headerlink" title="3.5 安全性"></a>3.5 安全性</h5><pre><code>            产品或系统保护信息和数据，方便人员或其他系统对信息和数据访问的程度。
+
+                3.5.1 保密性
+
+                            数据不会泄露，防窃取。
+
+                            加密存储，加密传输。
+
+                                eg.软件系统密码加密后存储
+
+                                eg. https 协议是加密传输，web应用都会采用https协议传输，而非http协议                                        （不保密）
+
+                                http:1）无状态，协议对客户端没有状态存储，对事物处理没有记忆能力，比如
+
+                                        访问一个网站需要反复进行登录操作。
+
+                                        2）无连接，每次请求都需要通过三次握手和四次挥手，和服务器建立连接
+
+                                        3）通信使用明文，请求和响应不会和通信方确认，无法保护数据的完整                                                  性。
+
+                                https:内容加密，采用混合加密技术，中间者无法直接查看明文内容，验证身份
+
+                                            ，通过证书认证客户端确认访问自己的服务器，保护数据的完整性，防止
+
+                                            内容被中间人，篡改或冒充。
+</code></pre>
+<p>​                        </p>
+<pre><code>                3.5.2 完整性
+
+                            数据不会破坏，防篡改防丢失。
+
+                            eg.加密传输加密存储，备份
+
+
+
+                3.5.3 不可抵赖性
+
+                            已经发生的操作，不可否认，软件系统要有证据
+
+                            系统的操作日志      软件信息的状态（已查看，已读）
+</code></pre>
+<p>​                                        </p>
+<pre><code>                3.5.4 可核查性
+
+                            发生过得操作，可查的，系统操作日志可查，什么时候，什么模块做了什么操作？
+</code></pre>
+<p>​                                </p>
+<pre><code>                3.5.5 真实性
+
+                            使用者的身份可被证明
+</code></pre>
+<h5 id="3-6-可靠性"><a href="#3-6-可靠性" class="headerlink" title="3.6 可靠性"></a>3.6 可靠性</h5><pre><code>            在规定的时间和条件下，软件能维持其正常功能操作和性能水平的程度。
+
+            3.6.1 成熟性
+
+                        软件能很好的处理软件内部的错误，不会出现异常
+
+
+
+            3.6.2 易恢复性
+
+                        出现异常后 能否恢复？要过多长时间可以恢复？能恢复到什么程度？
+
+                        word自动保存的设置（文件-选项-保存-自动保存设置），
+
+                        迅雷下载文件过程中断网或者异常关机，可以继续下载
+
+
+
+                        迅雷下载文件过程中断网或者异常关机
+
+            3.6.3 容错性
+
+                        软件能很好的处理外部错误或异常输入，不会出现异常。
+
+                        断网（信号被屏蔽或者插网线）
+
+                        断电 （电池耗尽，电池跳闸)
+
+
+
+            3.6.4 可用性
+
+                        是成熟性，容错性和易恢复性的组合
+
+                        系统的可用性，系统正常运行的时间占总时长的比例（故障，宕机）
+</code></pre>
+<h5 id="3-7-可移植性"><a href="#3-7-可移植性" class="headerlink" title="3.7 可移植性"></a>3.7 可移植性</h5><pre><code>            软件产品从一种环境迁移到另一种环境的能力
+
+            3.7.1 适用性
+
+                        软件产品无需采用特别的 手段就可以适应不同指定环境的能力
+
+                        环境 - 操作系统，浏览器，分辨率
+
+                        浏览器：
+
+                                    IE : Trident
+
+                                    Chrome：Webkit
+
+                                    FireFox：Gecko
+
+                                    Sarafi：Webkit
+
+                                    QQ浏览器极速版：Webkit
+
+                                                        普通版：Trident
+
+
+
+            3.7.2 易安装性
+
+                        软件产品在指定环境中被安装的能力
+
+                        1）命令行安装
+
+                        2）图形界面安装
+
+                        3）免安装（绿色安装）
+
+
+
+            3.7.3 易替换性
+
+                        软件产品在同样的环境下替换一个相同用途的指定软件产品的能力
+
+                        升级 - 自己替换自己
+
+                        不同软件之间的替换
+</code></pre>
+<h5 id="3-8-可维护性"><a href="#3-8-可维护性" class="headerlink" title="3.8 可维护性"></a>3.8 可维护性</h5><pre><code>            产品可被修改的能力
+
+            3.8.1 模块化 
+
+                        将功能相似的函数组合在一起成为一个模块 提供一个较为复杂的功能，可以复用。
+
+
+
+            3.8.2 可复用性 
+
+                        相识的功能不再重新写代码
+
+            3.8.3 易分析性 
+
+                        便于评估和诊断，比如出错提供出错日志，从用户处收集数据
+
+            3.8.4 易修改性 
+
+                        代码符合规范，注释完备，逻辑清晰，模块层次分明
+
+            3.8.5 易测试性 
+
+                        容易测试，提供注释行 ，提供日志      
+</code></pre>
+<h2 id="四、产品质量的种类"><a href="#四、产品质量的种类" class="headerlink" title="四、产品质量的种类"></a>四、产品质量的种类</h2><pre><code>        1）过程质量
+
+                过程执行的完整度和执行的力度。
+
+                SQA : S:    software    Q:    quality     A:    assurance
+
+
+
+        2）产品质量
+
+                软件研发过程中，工作成果物（文档，代码） 以及最终产品的质量
+
+                QC: quality control(测试工程师)
+
+
+
+        3）使用质量
+
+                用户在真实环境中运行软件系统时，所感受到的软件各方面特性与需求符合的程度。
+</code></pre>
+<h2 id="五、软件质量铁三角"><a href="#五、软件质量铁三角" class="headerlink" title="五、软件质量铁三角"></a>五、软件质量铁三角</h2><pre><code>            1）组织
+
+                    公司对质量管理的重视度，专业独立的测试团队，对专业人才流程技术的引进
+
+            2）流程
+
+                    质量管理体系：
+                    软件能力成熟度模型
+                    ----CMMI  Capability Maturity Model Intergration
+
+                        一共分为5级:
+
+                        1    初始级    最低：混乱无序
+
+                        2    可重复级            有基本流程
+
+                        3    已定义级                标准化
+
+                        4    已管理级                可量化
+
+                        5    优化级    最高：量化反馈，不断改进
+
+                    工作流程；研发流程；测试流程；缺陷管理流程；评审流程...
+
+            3）技术
+
+                A）技术人才
+
+                B）专业的知识：数据库技术，网络协议知识，软件质量模型...
+
+                C）专业技能
+
+                        测试分析技能（需求分析，用例设计）
+
+                        评审技术
+
+                        技术框架
+
+                        各种工具：
+
+                        SVN    禅道
+
+                        测试工具：jmter  ，load runner ，postman ，burpsuit（安全测试），
+
+                        emmage（app性能）
+</code></pre>
+<h2 id="六、软件质量的3个层次"><a href="#六、软件质量的3个层次" class="headerlink" title="六、软件质量的3个层次"></a>六、软件质量的3个层次</h2><pre><code>    1层：符合需求规格
+
+    2层：符合用户的显式需求
+
+    3层：符合用户的实际需求 （实际需求包括显式和隐式需求）
+</code></pre>
+<p>​                    </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://baidu.com">TT</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://secondarylove.github.io/2021/11/18/index/">https://secondarylove.github.io/2021/11/18/index/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">此文章版權歸TT所有，如有轉載，請註明來自原作者</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://raw.githubusercontent.com/secondarylove/blog-img/main/null1dc504ec70f1d0b4.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/secondarylove/blog-img/main/null1dc504ec70f1d0b4.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://raw.githubusercontent.com/secondarylove/blog-img/main/null1dc504ec70f1d0b4.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/secondarylove/blog-img/main/null1dc504ec70f1d0b4.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/11/16/hello-world/"><img class="prev-cover" src="https://github.com/secondarylove/blog-img/blob/main/2.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hello World</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/19/software%20test3/2022.2.20/"><img class="next-cover" src="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">软件测试第三次课笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://github.com/secondarylove/blog-img/blob/main/1def43abf85b8715__01.jpg?raw=true" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">TT</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/secondarylove"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1281589545@qq@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/blog.junanrtu.con" target="_blank" title="博客"><i class="fas fa-cloud-moon-rain"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%BE%E7%A8%8B%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">一、课程目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%A8%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">二、什么是质量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">三、软件质量模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-1-%E5%8A%9F%E8%83%BD%E9%80%82%E7%94%A8%E6%80%A7"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">3.1 功能适用性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-%E8%BF%90%E8%A1%8C%E6%95%88%E7%8E%87%EF%BC%88%E6%80%A7%E8%83%BD%EF%BC%89-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-Load-Runner-Jmeter"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">3.2 运行效率（性能） (自动化测试工具 Load Runner  , Jmeter)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-3-%E6%98%93%E7%94%A8%E6%80%A7"><span class="toc-number">3.0.0.3.</span> <span class="toc-text">3.3 易用性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-4-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-number">3.0.0.4.</span> <span class="toc-text">3.4 兼容性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-5-%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-number">3.0.0.5.</span> <span class="toc-text">3.5 安全性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-number">3.0.0.6.</span> <span class="toc-text">3.6 可靠性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-7-%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-number">3.0.0.7.</span> <span class="toc-text">3.7 可移植性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-8-%E5%8F%AF%E7%BB%B4%E6%8A%A4%E6%80%A7"><span class="toc-number">3.0.0.8.</span> <span class="toc-text">3.8 可维护性</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">四、产品质量的种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E9%93%81%E4%B8%89%E8%A7%92"><span class="toc-number">5.</span> <span class="toc-text">五、软件质量铁三角</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%9A%843%E4%B8%AA%E5%B1%82%E6%AC%A1"><span class="toc-number">6.</span> <span class="toc-text">六、软件质量的3个层次</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/18/%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0/%E5%9B%BE%E7%89%87/" title="图片"><img src="https://github.com/secondarylove/blog-img/blob/main/2.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图片"/></a><div class="content"><a class="title" href="/2021/11/18/%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0/%E5%9B%BE%E7%89%87/" title="图片">图片</a><time datetime="2021-11-18T00:00:00.000Z" title="发表于 2021-11-18 08:00:00">2021-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/18/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/%E6%BC%94%E7%A4%BA/" title="代码演示"><img src="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="代码演示"/></a><div class="content"><a class="title" href="/2021/11/18/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%BC%94%E7%A4%BA/%E6%BC%94%E7%A4%BA/" title="代码演示">代码演示</a><time datetime="2021-11-17T16:37:00.000Z" title="发表于 2021-11-18 00:37:00">2021-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/11/16/hello-world/" title="Hello World"><img src="https://github.com/secondarylove/blog-img/blob/main/2.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/11/16/hello-world/" title="Hello World">Hello World</a><time datetime="2021-11-16T07:58:21.367Z" title="发表于 2021-11-16 15:58:21">2021-11-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/19/software%20test2/2022.2.19/" title="软件测试第二次课笔记"><img src="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软件测试第二次课笔记"/></a><div class="content"><a class="title" href="/2021/02/19/software%20test2/2022.2.19/" title="软件测试第二次课笔记">软件测试第二次课笔记</a><time datetime="2021-02-19T02:25:00.000Z" title="发表于 2021-02-19 10:25:00">2021-02-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/19/software%20test3/2022.2.20/" title="软件测试第三次课笔记"><img src="https://raw.githubusercontent.com/secondarylove/blog-img/main/wallhaven-0qgz75.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软件测试第三次课笔记"/></a><div class="content"><a class="title" href="/2021/02/19/software%20test3/2022.2.20/" title="软件测试第三次课笔记">软件测试第三次课笔记</a><time datetime="2021-02-19T02:25:00.000Z" title="发表于 2021-02-19 10:25:00">2021-02-19</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By TT</div><div class="footer_custom_text">很高兴认识你  🙄</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
